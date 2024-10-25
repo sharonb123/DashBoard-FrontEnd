@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather and Hyacinth Dashboard</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="left-panel">
+            <h2>Key Weather Features Overview</h2>
+            <div class="chart-container">
+                <h3>Wind Gust & Speed Average</h3>
+                <canvas id="windGustSpeedChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h3>Wind Direction Average</h3>
+                <canvas id="windDirectionChart"></canvas>
+            </div>
+            <div class="chart-container">
+                <h3>Average Temperature</h3>
+                <canvas id="temperatureChart"></canvas>
+            </div>
+        </div>
+        
+        <div class="right-panel">
+            <div class="map-container">
+                <h3>Map Visualization</h3>
+                <div id="map-placeholder">Select or drag fields to populate this visual</div>
+            </div>
+            <div class="hyacinth-container">
+                <h3>Key Hyacinth Features</h3>
+                <div id="hyacinth-placeholder">Hyacinth data visualizations</div>
+            </div>
+        </div>
+    </div>
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
+    <script src="script2.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Weather Data Dashboard</h1>
+
+    <!-- Filter options -->
+    <div id="filters">
+        <label for="yearFilter">Year:</label>
+        <select id="yearFilter">
+            <option value="">All</option>
+        </select>
+
+        <label for="monthFilter">Month:</label>
+        <select id="monthFilter">
+            <option value="">All</option>
+        </select>
+
+        <button id="filterButton">Go</button>
+    </div>
+
+
+<div class="dashboard-container">
+
+    <div class="left-panel">
+
+        <div class="chart-container">
+            <h3>Average Temperature Over Time</h3>
+            <canvas id="temperatureChart" width="400" height="200"></canvas>
+        </div>
+    
+        <div class="chart-container">
+            <h3>Average Wind Speed & Gusts</h3>
+            <canvas id="windSpeedGustChart" width="400" height="200"></canvas>
+        </div>
+    
+        <div class="chart-container">
+            <h3>Wind Direction Over Time</h3>
+            <canvas id="windDirectionChart" width="400" height="200"></canvas>
+        </div>
+    
+        <div class="chart-container">
+            <h3>Average Relative Humidity</h3>
+            <canvas id="humidityChart" width="400" height="200"></canvas>
+        </div>
+    </div>
+    
+
+    <div class="right-panel">
+        <div class="map-container">
+            <h3>Hyacinth Story</h3>
+            <div id="map-placeholder">Select or drag fields to populate this visual</div>
+        </div>
+        <div class="hyacinth-container">
+            <h3>Prediction</h3>
+            <!--<div id="hyacinth-placeholder">Hyacinth data visualizations</div>-->
+            <img id="predictionImage" src="latest_image_prediction.png" alt="Prediction Visualization" style="width: 100%; height: auto; margin-top: 20px;">
+            <button id="PredictButton">Predict</button>
+        </div>
+    </div>
+
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

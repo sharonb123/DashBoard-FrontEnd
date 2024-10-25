@@ -1,0 +1,160 @@
+h1 {
+    font-size: 2.5em;              /* Larger font size for prominence */
+    color: #fff;                   /* White text for visibility */
+    text-align: center;            /* Center the header */
+    margin: 20px 0;                /* Spacing above and below the header */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Soft shadow for depth */
+    letter-spacing: 1px;           /* Slightly increase space between letters */
+    font-family: 'Arial', sans-serif; /* Consistent font with the rest of the dashboard */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.left-panel, .right-panel {
+    flex: 1;
+    margin: 10px;
+    min-width: 250px; /* Minimum width to maintain readability */
+}
+
+.left-panel, .right-panel {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Added shadow for depth */
+}
+
+.chart-container {
+    margin-bottom: 30px;
+}
+
+h2, h3 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+canvas {
+    width: 100% !important; /* Ensure canvas is always 100% of its container */
+    height: auto; /* Allow height to adjust based on width */
+    max-height: 300px; /* Max height to keep charts manageable */
+}
+
+#map-placeholder, #hyacinth-placeholder {
+    background-color: #444;
+    border: 2px dashed #666;
+    color: #999;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    height: 250px; /* Keep height fixed for placeholders */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#PredictButton {
+    background-color: #4CAF50;    /* Green background to signify action */
+    color: white;                  /* Text color */
+    border: none;                  /* No border */
+    border-radius: 5px;           /* Slightly rounded corners */
+    padding: 12px 24px;           /* Increased padding for a bigger button */
+    font-size: 1.1em;              /* Slightly larger font size */
+    cursor: pointer;               /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    margin-top: 20px;              /* Added margin to push the button down */
+}
+
+#PredictButton:hover {
+    background-color: #45a049;   /* Darker green on hover */
+    transform: scale(1.05);      /* Slightly enlarge on hover */
+}
+
+#PredictButton:active {
+    transform: scale(0.95);       /* Slightly shrink when clicked */
+}
+
+/* Styles for the prediction image */
+#predictionImage {
+    width: 100%;               /* Full width to fit the container */
+    height: auto;              /* Maintain aspect ratio */
+    border-radius: 10px;       /* Rounded corners to match other elements */
+    margin-top: 20px;           /* Space between the image and the button */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column; /* Stack panels on small screens */
+    }
+    
+    .left-panel, .right-panel {
+        width: 100%; /* Full width on smaller screens */
+        margin: 0; /* Remove margins for better fit */
+    }
+
+    canvas {
+        max-height: 200px; /* Reduce height for smaller screens */
+    }
+
+    #map-placeholder, #hyacinth-placeholder {
+        height: auto; /* Allow height to adjust for smaller screens */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    #predictionImage {
+        max-height: 300px; /* Limit the height on smaller screens */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    h2 {
+        font-size: 1.5em; /* Responsive font size for smaller devices */
+    }
+
+    h3 {
+        font-size: 1.2em; /* Responsive font size for smaller devices */
+    }
+
+    h1 {
+        font-size: 1.5em;          /* Smaller font size for small screens */
+        margin: 10px 0;           /* Further adjust margins */
+    }
+
+    #PredictButton {
+        padding: 6px 12px;        /* Further adjust padding for small screens */
+        font-size: 0.8em;         /* Smaller font size for small screens */
+    }
+
+    #predictionImage {
+        max-height: 200px; /* Further reduce height on very small screens */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 2em;            /* Slightly smaller font size for medium screens */
+        margin: 15px 0;           /* Adjust margins */
+    }
+
+    #PredictButton {
+        padding: 8px 16px;        /* Slightly smaller padding for medium screens */
+        font-size: 0.9em;         /* Smaller font size for medium screens */
+    }
+
+    #predictionImage {
+        max-height: 250px; /* Adjust image size for medium screens */
+    }
+}
