@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Water hyacinth: Hartbeespoort Dam </h1>
+    <div class="Dashboard">
+        <div class="custom-grid">
+            <div class="grid-item item-1">
+                <p style="font-size: small; text-align:justify">Hyacinth story:<br>
+                    Lorem Ipsum is simply dummy text of the printing and</p>
+            </div>
+
+            <div class="grid-item item-2">2<br>
+                <p>This is where sharons Wind plot will go</p>
+            </div>
+
+            <div class="grid-item item-4">
+                <h6>Temperature and Hyacinth Data</h6>
+                <canvas id="stackedBarLineChart"></canvas>
+
+            </div>
+            <div class="grid-item item-5">
+                <img id="predictionImage" src="./data/latest_image_prediction.png" alt="Prediction Visualization" style="width: 100%; height: 90%; margin-top: 0.1rem;">
+                <div class="button-container" style="display: flex; align-items: center;">
+                    <button id="PredictButton">Predict</button>
+                    <div class="spinner" id="loadingSpinner"></div>
+                </div>
+            </div>
+            <div class="grid-item item-3">
+                <div class="ml-model" style="margin-top: 2rem;">
+                    <div class="row" style="display: flex; align-items: center; justify-content: center;">
+                        <div class="col text-center" style="margin-right: 20px;">
+                            <div class="speedometer">
+                                <div class="gauge">
+                                    <div class="gauge-fill" id="gaugeFill" style="height: 0%;"></div>
+                                </div>
+                                <div class="gauge-label">Accuracy: <span id="accuracyValue">83</span>%</div>
+                            </div>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="grid-item item-8">
+                <div class="col text-center">
+                    <div class="precision-stars" style="display: flex; align-items: center; margin-left: 5rem; margin-top: 2rem;">
+                        <span class="star filled-red">★</span>
+                        <span class="star filled-orange">★</span>
+                        <span class="star filled-yellow">★</span>
+                        <span class="star filled-grey">★</span>
+                        <span class="star filled-grey">★</span>
+                        
+                    </div>
+                    <div style="margin-left: 1rem;">Precision: 50%</div> 
+                </div>
+
+            </div>
+            
+            <div class="grid-item item-6">
+                <canvas id="scatterBubbleChart" width="400" height="400"></canvas>
+
+            </div>
+            <div class="grid-item item-7" style="margin: auto;"><canvas id="hyacinthPieChart"></canvas>
+            </div>
+            <div class="grid-item item-9">9<br> This is where future considerations will go</div>
+          </div>
+          
+    </div>
+      
+    <!--JAVASCRIPT AREA-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
+    <script src="fetchWeather.js"></script>
+    <script src="script.js"></script>
+    <script src="prediction.js"></script>
+</body>
+</html>
